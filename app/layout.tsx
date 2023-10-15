@@ -7,8 +7,10 @@ import ClientOnly from './components/ClientOnly';
 import RegisterModel from './components/models/RegisterModel';
 import ToasterProvider from './providers/ToasterProvider';
 import LoginModel from './components/models/LoginModel';
+import RentModel from './components/models/RentModel';
 
 import getCurrentUser from './actions/getCurrentUser';
+
 
 export const metadata: Metadata = {
   title: 'Airbnb',
@@ -30,6 +32,7 @@ export default async function RootLayout({
       <body className={front.className}>
         <ClientOnly>
           <ToasterProvider />
+          <RentModel />
           <LoginModel />
           <RegisterModel />
           <Navbar currentUser={currentUser} />
