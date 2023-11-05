@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { IoMdClose } from 'react-icons/io';
 import Button from '../Button';
 
-interface ModelProps {
+interface ModalProps {
     isOpen?: boolean,
     onClose: () => void,
     onSubmit: () => void,
@@ -19,7 +19,7 @@ interface ModelProps {
     secondaryActionLabel?: string;
 }
 
-const Model: React.FC<ModelProps> = ({ isOpen, onClose, onSubmit, title, body, footer, actionLabel, disabled, secondaryAction, secondaryActionLabel }) => {
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit, title, body, footer, actionLabel, disabled, secondaryAction, secondaryActionLabel }) => {
 
     const [showModal, setShowModal] = useState(isOpen);
 
@@ -98,4 +98,4 @@ const Model: React.FC<ModelProps> = ({ isOpen, onClose, onSubmit, title, body, f
     );
 };
 
-export default Model;
+export default Modal;

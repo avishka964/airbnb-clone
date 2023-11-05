@@ -1,6 +1,6 @@
 'use client';
-import Model from './Model';
-import useRentModal from '@/app/hooks/useRentModel';
+import Modal from './Modal';
+import useRentModal from '@/app/hooks/useRentModal';
 import { useMemo, useState } from 'react';
 import Heading from '../Heading';
 import { categories } from '../navbar/Categories';
@@ -26,9 +26,9 @@ enum STEPS {
 }
 
 
-const RentModel = () => {
+const RentModal = () => {
 
-  const rentModel = useRentModal();
+  const RentModal = useRentModal();
 
   const router = useRouter();
 
@@ -98,7 +98,7 @@ const RentModel = () => {
         router.refresh();
         reset();
         setStep(STEPS.CATEGORY);
-        rentModel.onClose();
+        RentModal.onClose();
       }).catch(() => {
         toast.error('Something went wrong!');
       }).finally(() => {
@@ -196,9 +196,9 @@ const RentModel = () => {
 
 
   return (
-    <Model
-      isOpen={rentModel.isOpen}
-      onClose={rentModel.onClose}
+    <Modal
+      isOpen={RentModal.isOpen}
+      onClose={RentModal.onClose}
       onSubmit={handleSubmit(onSubmit)}
       actionLabel={actionLabel}
       secondaryActionLabel={SecondaryActionLabel}
@@ -209,4 +209,4 @@ const RentModel = () => {
   );
 };
 
-export default RentModel;
+export default RentModal;
