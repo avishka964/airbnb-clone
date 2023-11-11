@@ -6,7 +6,6 @@ interface IParams {
     authorId?: string;
 }
 
-
 export default async function getReservations(
     params: IParams
 ) {

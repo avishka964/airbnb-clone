@@ -7,7 +7,7 @@ import {MdOutlineVilla} from 'react-icons/md'
 import {FaSkiing} from 'react-icons/fa'
 import {BsSnow} from 'react-icons/bs'
 import CategoryBox from '../CategoryBox';
-import {useRouter, useSearchParams, usePathname} from 'next/navigation';
+import {useSearchParams, usePathname} from 'next/navigation';
 
 export const categories = [
     {

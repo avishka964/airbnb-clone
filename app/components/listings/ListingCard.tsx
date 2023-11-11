@@ -1,11 +1,14 @@
 'use client';
 
 import { SafeListing, SafeReservation, SafeUser } from '@/app/types';
-import { useRouter } from 'next/navigation';
+
 import useCountries from '@/app/hooks/useCountries';
 import { useCallback, useMemo } from 'react';
 import { format } from 'date-fns';
+
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+
 import HeartButton from '../HeartButton';
 import Button from '../Button';
 

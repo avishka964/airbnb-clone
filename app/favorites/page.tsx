@@ -1,5 +1,6 @@
 import getCurrentUser from '../actions/getCurrentUser';
 import getFavoriteListings from '../actions/getFavorites';
+
 import ClientOnly from '../components/ClientOnly';
 import EmptyState from '../components/EmptyState';
 import FavoritesClient from './FavoritesClient';
