@@ -18,7 +18,7 @@ import Heading from '../Heading';
 import Input from '../inputs/Input';
 import { toast } from 'react-hot-toast';
 import Button from '../Button';
-import {signIn} from 'next-auth/react';
+import { signIn } from 'next-auth/react';
 
 
 
@@ -41,6 +41,7 @@ const RegisterModal = () => {
         axios.post('/api/register', data)
             .then(() => {
                 registerModal.onClose();
+                loginModal.onOpen();
             })
             .catch((error) => {
                 toast.error('Something went wrong');
@@ -53,7 +54,7 @@ const RegisterModal = () => {
     const toggle = useCallback(() => {
         registerModal.onClose();
         loginModal.onOpen();
-    }, [loginModal, registerModal])
+    }, [loginModal, registerModal]);
 
     const bodyContent = (
         <div className='flex flex-col gap-4'>
