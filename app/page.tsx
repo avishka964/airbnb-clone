@@ -24,8 +24,6 @@ const Home = async ({
     );
   }
 
-
-
   return (
     <ClientOnly>
       <Container>

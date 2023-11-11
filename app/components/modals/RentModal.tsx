@@ -113,7 +113,7 @@ const RentModal = () => {
     return 'Next';
   }, [step]);
 
-  const SecondaryActionLabel = useMemo(() => {
+  const secondaryActionLabel = useMemo(() => {
     if (step === STEPS.CATEGORY) {
       return undefined;
     }
@@ -146,8 +146,7 @@ const RentModal = () => {
         <CountrySelect
           value={location}
           onChange={(value) => setCustomValue('location', value)} />
-        <Map center={location?.latlng} />
-
+        <Map center={location?.latlng} /> 
       </div>
     );
   }
@@ -201,7 +200,7 @@ const RentModal = () => {
       onClose={RentModal.onClose}
       onSubmit={handleSubmit(onSubmit)}
       actionLabel={actionLabel}
-      secondaryActionLabel={SecondaryActionLabel}
+      secondaryActionLabel={secondaryActionLabel}
       secondaryAction={step === STEPS.CATEGORY ? undefined : onBack}
       title="Airbnb your home!"
       body={bodyContent}
